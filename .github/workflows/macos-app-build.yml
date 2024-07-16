@@ -1,0 +1,36 @@
+name: Build macOS App
+
+on:
+  push:
+    branches:
+      - main  # Укажите ветку, с которой должен запускаться билд
+
+jobs:
+  build:
+    runs-on: macos-latest  # Запуск на самой последней версии macOS
+
+    steps:
+      - uses: actions/checkout@v2  # Шаг для клонирования репозитория
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'  # Укажите нужную версию Python
+
+      - name: Install dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install py2app
+          pip install -r requirements.txt  # Установка зависимостей вашего проекта
+
+      - name: Build app
+        run: |
+          source venv/bin/activate
+          python setup.py py2app  # Команда для сборки .app файла
+
+      - name: Upload built app
+        uses: actions/upload-artifact@v2
+        with:
+          name: myapp  # Имя для артефакта сборки
+          path: dist/  # Путь к папке с .app файлом
