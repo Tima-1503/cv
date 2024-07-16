@@ -1,6 +1,6 @@
 from setuptools import setup
 
-APP = ['your_script.py']  # Замените 'your_script.py' на имя вашего основного скрипта
+APP = ['cv-mac.py']  # Замените 'your_script.py' на имя вашего основного скрипта
 
 OPTIONS = {
     'argv_emulation': True,
