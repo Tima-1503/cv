@@ -15,7 +15,7 @@ OPTIONS = {
         'CFBundleExecutable': "YourAppName",
         'LSUIElement': True,  # Если ваше приложение не показывает окно
     },
-    'iconfile': 'icon.icns',  # Укажите путь к вашему файлу иконки, если требуется
+
 }
 
 setup(
