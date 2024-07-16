@@ -4,7 +4,7 @@ APP = ['cv-mac.py']  # Замените 'your_script.py' на имя вашег�
 
 OPTIONS = {
     'argv_emulation': True,
-    'packages': ['cv2', 'dlib', 'requests', 'ftplib', 'platform', 'os', 'socket', 'time'],
+    'packages': ['cv2', 'dlib', 'requests', 'ftplib', 'os', 'socket', 'time'],
     'plist': {
         'CFBundleName': 'YourAppName',
         'CFBundleDisplayName': 'Your App Name',

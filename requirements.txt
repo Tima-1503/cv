@@ -1,4 +1,4 @@
-platform
+
 opencv-python-headless
 requests
 pyobjc; sys_platform == 'darwin'  # Для работы с macOS
