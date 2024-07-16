@@ -15,7 +15,7 @@ OPTIONS = {
         'CFBundleExecutable': "YourAppName",
         'LSUIElement': True,  # Если ваше приложение не показывает окно
     },
-
+    # Удаляем параметр 'iconfile'
 }
 
 setup(
